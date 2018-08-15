@@ -50,10 +50,10 @@ bool initialized;
 UILocalNotification *launchNotification;
 
 typedef NS_ENUM(NSInteger, RepeatInterval) {
-    EveryMinute,
-    Hourly,
-    Daily,
-    Weekly
+    Weekly,
+    WeeklyTwo,
+    WeeklyThree,
+    WeeklyFour
 };
 
 
@@ -258,18 +258,20 @@ typedef NS_ENUM(NSInteger, RepeatInterval) {
         Boolean repeats = NO;
         if(notificationDetails.repeatInterval != nil) {
             switch([notificationDetails.repeatInterval integerValue]) {
-                case EveryMinute:
-                    timeInterval = 60;
-                    break;
-                case Hourly:
-                    timeInterval = 60 * 60;
-                    break;
-                case Daily:
-                    timeInterval = 60 * 60 * 24;
-                    break;
-                case Weekly:
-                    timeInterval = 60 * 60 * 24 * 7;
-                    break;
+            case Weekly:
+                timeInterval = 60000 * 60 * 24 * 7;
+                break;
+            case WeeklyTwo:
+                timeInterval = 60000 * 60 * 24 * 7 * 2;
+                break;
+            case WeeklyThree:
+                timeInterval = 60000 * 60 * 24 * 7 * 3;
+                break;
+            case WeeklyFour:
+                timeInterval = 60000 * 60 * 24 * 7 * 4;
+                break;
+            default:
+                break;
             }
             repeats = YES;
         }
@@ -331,19 +333,19 @@ typedef NS_ENUM(NSInteger, RepeatInterval) {
             NSTimeInterval timeInterval = 0;
             
             switch([notificationDetails.repeatInterval integerValue]) {
-                case EveryMinute:
-                    timeInterval = 60;
-                    notification.repeatInterval = NSCalendarUnitMinute;
-                    break;
-                case Hourly:
-                    timeInterval = 60 * 60;
-                    notification.repeatInterval = NSCalendarUnitHour;
-                    break;
-                case Daily:
-                    timeInterval = 60 * 60 * 24;
-                    notification.repeatInterval = NSCalendarUnitDay;
-                    break;
                 case Weekly:
+                    timeInterval = 60 * 60;
+                    notification.repeatInterval = NSCalendarUnitWeekOfYear;
+                    break;
+                case WeeklyTwo:
+                    timeInterval = 60 * 60 * 24;
+                    notification.repeatInterval = NSCalendarUnitWeekOfYear;
+                    break;
+                case WeeklyThree:
+                    timeInterval = 60 * 60 * 24 * 7;
+                    notification.repeatInterval = NSCalendarUnitWeekOfYear;
+                    break;
+                case WeeklyFour:
                     timeInterval = 60 * 60 * 24 * 7;
                     notification.repeatInterval = NSCalendarUnitWeekOfYear;
                     break;

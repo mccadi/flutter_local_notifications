@@ -3,7 +3,7 @@ part of flutter_local_notifications;
 typedef Future<dynamic> MessageHandler(String message);
 
 /// The available intervals for periodically showing notifications
-enum RepeatInterval { EveryMinute, Hourly, Daily, Weekly }
+enum RepeatInterval { Weekly, WeeklyTwo, WeeklyThree, WeeklyFour }
 
 /// The days of the week
 class Day {

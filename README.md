@@ -132,7 +132,7 @@ var iOSPlatformChannelSpecifics =
 var platformChannelSpecifics = new NotificationDetails(
     androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
 await flutterLocalNotificationsPlugin.periodicallyShow(0, 'repeating title',
-    'repeating body', RepeatInterval.EveryMinute, platformChannelSpecifics);
+    'repeating body', RepeatInterval.Weekly, platformChannelSpecifics);
 ```
 
 ### Show a daily notification at a specific time
