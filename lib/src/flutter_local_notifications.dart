@@ -140,35 +140,35 @@ class FlutterLocalNotificationsPlugin {
   }
 
   /// Shows a notification on a daily interval at the specified time
-  Future showDailyAtTime(int id, String title, String body,
-      Time notificationTime, NotificationDetails notificationDetails,
-      {String payload}) async {
-    var serializedPlatformSpecifics =
-        _retrievePlatformSpecificNotificationDetails(notificationDetails);
-    await _channel.invokeMethod('showDailyAtTime', <String, dynamic>{
-      'id': id,
-      'title': title,
-      'body': body,
-      'calledAt': new DateTime.now().millisecondsSinceEpoch,
-      'repeatInterval': RepeatInterval.Daily.index,
-      'repeatTime': notificationTime.toMap(),
-      'platformSpecifics': serializedPlatformSpecifics,
-      'payload': payload ?? ''
-    });
-  }
+  // Future showDailyAtTime(int id, String title, String body,
+  //     Time notificationTime, NotificationDetails notificationDetails,
+  //     {String payload}) async {
+  //   var serializedPlatformSpecifics =
+  //       _retrievePlatformSpecificNotificationDetails(notificationDetails);
+  //   await _channel.invokeMethod('showDailyAtTime', <String, dynamic>{
+  //     'id': id,
+  //     'title': title,
+  //     'body': body,
+  //     'calledAt': new DateTime.now().millisecondsSinceEpoch,
+  //     'repeatInterval': RepeatInterval.Weekly.index,
+  //     'repeatTime': notificationTime.toMap(),
+  //     'platformSpecifics': serializedPlatformSpecifics,
+  //     'payload': payload ?? ''
+  //   });
+  // }
 
-  /// Shows a notification on a daily interval at the specified time
-  Future showWeeklyAtDayAndTime(int id, String title, String body, Day day,
-      Time notificationTime, NotificationDetails notificationDetails,
+  /// Shows a notification on a daily interval at the specified time and interval
+  Future scheduleFacetoFaceNotification(int id, String title, String body, Day day,
+      Time notificationTime, RepeatInterval interval, NotificationDetails notificationDetails,
       {String payload}) async {
     var serializedPlatformSpecifics =
         _retrievePlatformSpecificNotificationDetails(notificationDetails);
-    await _channel.invokeMethod('showWeeklyAtDayAndTime', <String, dynamic>{
+    await _channel.invokeMethod('scheduleFacetoFaceNotification', <String, dynamic>{
       'id': id,
       'title': title,
       'body': body,
       'calledAt': new DateTime.now().millisecondsSinceEpoch,
-      'repeatInterval': RepeatInterval.Weekly.index,
+      'repeatInterval': interval.index,
       'repeatTime': notificationTime.toMap(),
       'day': day.value,
       'platformSpecifics': serializedPlatformSpecifics,

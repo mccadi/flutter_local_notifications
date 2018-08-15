@@ -95,7 +95,7 @@ class _MyAppState extends State<MyApp> {
                       child: new Text(
                           'Repeat notification every day at approximately 10:00:00 am'),
                       onPressed: () async {
-                        await _showDailyAtTime();
+                       // await _showDailyAtTime();
                       },
                     ),
                   ),
@@ -410,25 +410,25 @@ class _MyAppState extends State<MyApp> {
     var platformChannelSpecifics = new NotificationDetails(
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.periodicallyShow(0, 'repeating title',
-        'repeating body', RepeatInterval.EveryMinute, platformChannelSpecifics);
+        'repeating body', RepeatInterval.Weekly, platformChannelSpecifics);
   }
 
-  Future _showDailyAtTime() async {
-    var time = new Time(10, 0, 0);
-    var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
-        'repeatDailyAtTime channel id',
-        'repeatDailyAtTime channel name',
-        'repeatDailyAtTime description');
-    var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
-    var platformChannelSpecifics = new NotificationDetails(
-        androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
-    await flutterLocalNotificationsPlugin.showDailyAtTime(
-        0,
-        'show daily title',
-        'Daily notification shown at approximately ${_toTwoDigitString(time.hour)}:${_toTwoDigitString(time.minute)}:${_toTwoDigitString(time.second)}',
-        time,
-        platformChannelSpecifics);
-  }
+  // Future _showDailyAtTime() async {
+  //   var time = new Time(10, 0, 0);
+  //   var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
+  //       'repeatDailyAtTime channel id',
+  //       'repeatDailyAtTime channel name',
+  //       'repeatDailyAtTime description');
+  //   var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
+  //   var platformChannelSpecifics = new NotificationDetails(
+  //       androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
+  //   await flutterLocalNotificationsPlugin.showDailyAtTime(
+  //       0,
+  //       'show daily title',
+  //       'Daily notification shown at approximately ${_toTwoDigitString(time.hour)}:${_toTwoDigitString(time.minute)}:${_toTwoDigitString(time.second)}',
+  //       time,
+  //       platformChannelSpecifics);
+  // }
 
   Future _showWeeklyAtDayAndTime() async {
     var time = new Time(10, 0, 0);
@@ -439,12 +439,12 @@ class _MyAppState extends State<MyApp> {
     var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
     var platformChannelSpecifics = new NotificationDetails(
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
-    await flutterLocalNotificationsPlugin.showWeeklyAtDayAndTime(
+    await flutterLocalNotificationsPlugin.scheduleFacetoFaceNotification(
         0,
         'show weekly title',
         'Weekly notification shown on Monday at approximately ${_toTwoDigitString(time.hour)}:${_toTwoDigitString(time.minute)}:${_toTwoDigitString(time.second)}',
         Day.Monday,
-        time,
+        time, RepeatInterval.Weekly,
         platformChannelSpecifics);
   }
 
