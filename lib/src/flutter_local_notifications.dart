@@ -163,7 +163,7 @@ class FlutterLocalNotificationsPlugin {
       {String payload}) async {
     var serializedPlatformSpecifics =
         _retrievePlatformSpecificNotificationDetails(notificationDetails);
-    await _channel.invokeMethod('scheduleFacetoFaceNotification', <String, dynamic>{
+    await _channel.invokeMethod('showWeeklyAtDayAndTime', <String, dynamic>{
       'id': id,
       'title': title,
       'body': body,
