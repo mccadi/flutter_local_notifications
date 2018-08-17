@@ -1,6 +1,6 @@
-# flutter_local_notifications_example
+# f2f_notifications_example
 
-Demonstrates how to use the flutter_local_notifications plugin.
+Demonstrates how to use the f2f_notifications plugin.
 
 ## Getting Started
 

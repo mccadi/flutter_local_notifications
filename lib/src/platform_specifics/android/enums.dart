@@ -1,4 +1,4 @@
-part of flutter_local_notifications;
+part of f2f_notifications;
 
 /// Specifies if the source for a bitmap used by Android notifications.
 enum BitmapSource { Drawable, FilePath }

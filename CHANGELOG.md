@@ -1,8 +1,8 @@
 ## [0.3.7]
-* [Android] Fix issues [88](https://github.com/MaikuB/flutter_local_notifications/issues/88) where cancelled notifications could reappear on reboot.
+* [Android] Fix issues [88](https://github.com/MaikuB/f2f_notifications/issues/88) where cancelled notifications could reappear on reboot.
 
 ## [0.3.6]
-* [Android] Add mapping to the setOnlyAlertOnce method [83](https://github.com/MaikuB/flutter_local_notifications/issues/83). Allows the sound, vibrate and ticker to be played if the notification is not already showing
+* [Android] Add mapping to the setOnlyAlertOnce method [83](https://github.com/MaikuB/f2f_notifications/issues/83). Allows the sound, vibrate and ticker to be played if the notification is not already showing
 * [Android] Add mapping to setShowBadge for notification channels that controls if notifications posted to channel can appear as application icon badges in a Launcher
 
 ## [0.3.5]
@@ -10,11 +10,11 @@
 * Fix overflow rendering issue in the example app
 
 ## [0.3.4]
-* [Android] Fix issue [71](https://github.com/MaikuB/flutter_local_notifications/issues/71) where the wrong time on when the notification occurred is being displayed. **BREAKING CHANGE** this involves changing it the receiver for displaying a scheduled notification will only build the notification prior to displaying it. There is a fix applied to existing scheduled notifications in this release that will be eventually be removed as going forward all scheduled notifications will work as just described
+* [Android] Fix issue [71](https://github.com/MaikuB/f2f_notifications/issues/71) where the wrong time on when the notification occurred is being displayed. **BREAKING CHANGE** this involves changing it the receiver for displaying a scheduled notification will only build the notification prior to displaying it. There is a fix applied to existing scheduled notifications in this release that will be eventually be removed as going forward all scheduled notifications will work as just described
 * [Android] Fix an issue with serialising and deserialising the notifications so that additional style types (big picture and inbox) would be recognised. This affected scheduled notifications where upon rebooting the device, the plugin would need to reschedule the notifications using information saved in shared preferences.
 
 ## [0.3.3]
-* [iOS] Fixes issue [61](https://github.com/MaikuB/flutter_local_notifications/issues/61) where the `showDailyAtTime` and `showWeeklyAtDayAndTime` methods may not show notifications that should appear the next day. Thanks to Jeff Scaturro (JeffScaturro) for submitting the PR to fix this.
+* [iOS] Fixes issue [61](https://github.com/MaikuB/f2f_notifications/issues/61) where the `showDailyAtTime` and `showWeeklyAtDayAndTime` methods may not show notifications that should appear the next day. Thanks to Jeff Scaturro (JeffScaturro) for submitting the PR to fix this.
 
 ## [0.3.2]
 * No functional changes. Updated the README around raising issues, recurring Android notifications on Android and a fix in the getting started section (thanks to ebeem for spotting that).

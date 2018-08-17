@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:f2f_notifications/f2f_notifications.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
@@ -443,8 +443,8 @@ class _MyAppState extends State<MyApp> {
         0,
         'show weekly title',
         'Weekly notification shown on Monday at approximately ${_toTwoDigitString(time.hour)}:${_toTwoDigitString(time.minute)}:${_toTwoDigitString(time.second)}',
-        Day.Monday,
-        time, RepeatInterval.Weekly,
+        Day.Friday,
+        Time(14,6), RepeatInterval.Weekly,
         platformChannelSpecifics);
   }
 

@@ -1,4 +1,4 @@
-part of flutter_local_notifications;
+part of f2f_notifications;
 
 /// Used to pass the content for an Android notification displayed using the big picture style
 class BigPictureStyleInformation extends DefaultStyleInformation {

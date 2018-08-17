@@ -1,6 +1,6 @@
 # Flutter Local Notifications Plugin
 
-[![pub package](https://img.shields.io/pub/v/flutter_local_notifications.svg)](https://pub.dartlang.org/packages/flutter_local_notifications)
+[![pub package](https://img.shields.io/pub/v/f2f_notifications.svg)](https://pub.dartlang.org/packages/f2f_notifications)
 
 A cross platform plugin for displaying local notifications. 
 
@@ -42,7 +42,7 @@ Note that this plugin aims to provide abstractions for all platforms as opposed 
 
 * [Javier Lecuona](https://github.com/javiercbk) for submitting the PR that added the ability to have notifications shown daily
 * [Jeff Scaturro](https://github.com/JeffScaturro) for submitting the PR to fix the iOS issue around showing daily and weekly notifications
-* [Ian Cavanaugh](https://github.com/icavanaugh95) for helping create a sample to reproduce the problem reported in [issue #88](https://github.com/MaikuB/flutter_local_notifications/issues/88)
+* [Ian Cavanaugh](https://github.com/icavanaugh95) for helping create a sample to reproduce the problem reported in [issue #88](https://github.com/MaikuB/f2f_notifications/issues/88)
 
 ## Raising issues and contributions
 
@@ -52,7 +52,7 @@ Contributions are welcome by submitting a PR for me to review. If it's to add ne
 
 ## Getting Started
 
-The GitHub repository has an example app that should demonstrate of all the supported features of the plugin. Please check the example for more detailed code samples. If you only copy and paste the Dart code then this will not work as there's setup required for each platform. Pub also generates API docs for the latest version [here](https://pub.dartlang.org/documentation/flutter_local_notifications/latest/)
+The GitHub repository has an example app that should demonstrate of all the supported features of the plugin. Please check the example for more detailed code samples. If you only copy and paste the Dart code then this will not work as there's setup required for each platform. Pub also generates API docs for the latest version [here](https://pub.dartlang.org/documentation/f2f_notifications/latest/)
 
 The following samples will demonstrate the more commonly used functionalities. The first step is to create a new instance of the plugin class and then initialise it with the settings to use for each platform
 
@@ -279,7 +279,7 @@ When specifying the large icon bitmap or big picture bitmap (associated with the
 
 Note that with Android 8.0+, sounds and vibrations are associated with notification channels and can only be configured when they are first created. Showing/scheduling a notification will create a channel with the specified id if it doesn't exist already. If another notification specifies the same channel id but tries to specify another sound or vibration pattern then nothing occurs.
 
-If you run into error messages around the `com.android.support:support-compat` library due to version conflicts, you can try adding the following to the `build.gradle` file of your Android head project as reported by another dev [here](https://github.com/MaikuB/flutter_local_notifications/issues/5)
+If you run into error messages around the `com.android.support:support-compat` library due to version conflicts, you can try adding the following to the `build.gradle` file of your Android head project as reported by another dev [here](https://github.com/MaikuB/f2f_notifications/issues/5)
 
 ```
 allprojects {
@@ -306,7 +306,7 @@ Note though this will force other plugins to use the same version of the library
 By design, iOS applications do not display notifications when they're in the foreground. For iOS 10+, use the presentation options to control the behaviour for when a notification is triggered while the app is in the foreground. For older versions of iOS, you will need update the AppDelegate class to handle when a local notification is received to display an alert. This is shown in the sample app within the `didReceiveLocalNotification` method of the `AppDelegate` class. The notification title can be found by looking up the `title` within the `userInfo` dictionary of the `UILocalNotification` object
 
 ```
-#import <flutter_local_notifications/FlutterLocalNotificationsPlugin.h>
+#import <f2f_notifications/FlutterLocalNotificationsPlugin.h>
 
 ...
 
@@ -368,4 +368,4 @@ Unfortunately, this platform limitation does mean that it's not possible to use 
 
 ## Testing
 
-As the plugin class is not static, it is possible to mock and verify it's behaviour when writing tests as part of your application. Check the source code for a sample test suite can be found at _test/flutter_local_notifications_test.dart_ that demonstrates how this can be done.
+As the plugin class is not static, it is possible to mock and verify it's behaviour when writing tests as part of your application. Check the source code for a sample test suite can be found at _test/f2f_notifications_test.dart_ that demonstrates how this can be done.

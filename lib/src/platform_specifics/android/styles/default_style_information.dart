@@ -1,4 +1,4 @@
-part of flutter_local_notifications;
+part of f2f_notifications;
 
 /// The default Android notification style
 class DefaultStyleInformation extends StyleInformation {

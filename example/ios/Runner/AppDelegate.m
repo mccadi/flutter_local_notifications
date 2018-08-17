@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "GeneratedPluginRegistrant.h"
-#import <flutter_local_notifications/FlutterLocalNotificationsPlugin.h>
+#import <f2f_notifications/FlutterLocalNotificationsPlugin.h>
 
 @implementation AppDelegate
 

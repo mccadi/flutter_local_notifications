@@ -1,4 +1,4 @@
-part of flutter_local_notifications;
+part of f2f_notifications;
 
 /// Configures the notification details on iOS.
 class IOSNotificationDetails {

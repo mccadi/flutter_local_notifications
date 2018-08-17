@@ -1,5 +1,5 @@
-name: flutter_local_notifications_example
-description: Demonstrates how to use the flutter_local_notifications plugin.
+name: f2f_notifications_example
+description: Demonstrates how to use the f2f_notifications plugin.
 
 dependencies:
   flutter:
@@ -15,7 +15,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_local_notifications:
+  f2f_notifications:
     path: ../
 
 # For information on the generic Dart part of this file, see the
