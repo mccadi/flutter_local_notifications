@@ -1,4 +1,4 @@
-package com.dexterous.flutterlocalnotifications.utils;
+package com.kapioshealth.f2fnotifications.utils;
 
 public class StringUtils {
     public static Boolean isNullOrEmpty(String string){

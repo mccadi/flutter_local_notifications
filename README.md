@@ -256,8 +256,8 @@ If your application needs the ability to schedule notifications then you need to
 Developers will also need to add the following so that plugin can handle displaying scheduled notifications and reschedule notifications upon a reboot
 
 ```xml
-<receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
-<receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+<receiver android:name="com.kapioshealth.f2fnotifications.ScheduledNotificationReceiver" />
+<receiver android:name="com.kapioshealth.f2fnotifications.ScheduledNotificationBootReceiver">
     <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED"></action>
     </intent-filter>

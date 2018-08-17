@@ -1,6 +1,6 @@
-package com.dexterous.flutterlocalnotifications.models.styles;
+package com.kapioshealth.f2fnotifications.models.styles;
 
-import com.dexterous.flutterlocalnotifications.BitmapSource;
+import com.kapioshealth.f2fnotifications.BitmapSource;
 
 public class BigPictureStyleInformation extends DefaultStyleInformation {
     public String contentTitle;

@@ -1,4 +1,4 @@
-package com.dexterous.flutterlocalnotifications.models;
+package com.kapioshealth.f2fnotifications.models;
 
 import java.util.Map;
 

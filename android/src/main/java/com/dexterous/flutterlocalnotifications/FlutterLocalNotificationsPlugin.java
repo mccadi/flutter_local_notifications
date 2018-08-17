@@ -1,4 +1,4 @@
-package com.dexterous.flutterlocalnotifications;
+package com.kapioshealth.f2fnotifications;
 
 import android.app.AlarmManager;
 import android.app.Notification;
@@ -21,14 +21,14 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.text.Html;
 import android.text.Spanned;
 
-import com.dexterous.flutterlocalnotifications.models.NotificationDetails;
-import com.dexterous.flutterlocalnotifications.models.styles.BigPictureStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.BigTextStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.DefaultStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.InboxStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.StyleInformation;
-import com.dexterous.flutterlocalnotifications.utils.BooleanUtils;
-import com.dexterous.flutterlocalnotifications.utils.StringUtils;
+import com.kapioshealth.f2fnotifications.models.NotificationDetails;
+import com.kapioshealth.f2fnotifications.models.styles.BigPictureStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.BigTextStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.DefaultStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.InboxStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.StyleInformation;
+import com.kapioshealth.f2fnotifications.utils.BooleanUtils;
+import com.kapioshealth.f2fnotifications.utils.StringUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;

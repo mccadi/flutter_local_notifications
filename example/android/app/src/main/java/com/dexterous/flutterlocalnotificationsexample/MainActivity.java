@@ -1,4 +1,4 @@
-package com.dexterous.flutterlocalnotificationsexample;
+package com.kapioshealth.f2fnotificationsexample;
 
 import android.os.Bundle;
 

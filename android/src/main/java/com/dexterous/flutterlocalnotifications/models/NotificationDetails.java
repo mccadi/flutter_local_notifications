@@ -1,16 +1,16 @@
-package com.dexterous.flutterlocalnotifications.models;
+package com.kapioshealth.f2fnotifications.models;
 
 import android.graphics.Color;
 import android.os.Build;
 
-import com.dexterous.flutterlocalnotifications.BitmapSource;
-import com.dexterous.flutterlocalnotifications.NotificationStyle;
-import com.dexterous.flutterlocalnotifications.RepeatInterval;
-import com.dexterous.flutterlocalnotifications.models.styles.BigPictureStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.BigTextStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.DefaultStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.InboxStyleInformation;
-import com.dexterous.flutterlocalnotifications.models.styles.StyleInformation;
+import com.kapioshealth.f2fnotifications.BitmapSource;
+import com.kapioshealth.f2fnotifications.NotificationStyle;
+import com.kapioshealth.f2fnotifications.RepeatInterval;
+import com.kapioshealth.f2fnotifications.models.styles.BigPictureStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.BigTextStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.DefaultStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.InboxStyleInformation;
+import com.kapioshealth.f2fnotifications.models.styles.StyleInformation;
 
 import java.util.ArrayList;
 import java.util.Map;

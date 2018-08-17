@@ -1,4 +1,4 @@
-package com.dexterous.flutterlocalnotifications;
+package com.kapioshealth.f2fnotifications;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

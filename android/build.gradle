@@ -1,4 +1,4 @@
-group 'com.dexterous.flutterlocalnotifications'
+group 'com.kapioshealth.f2fnotifications'
 version '1.0-SNAPSHOT'
 
 buildscript {
