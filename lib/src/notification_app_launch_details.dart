@@ -1,4 +1,4 @@
-part of flutter_local_notifications;
+part of f2f_notifications;
 
 class NotificationAppLaunchDetails {
   /// Indicates if the app was launched via notification
