@@ -1,4 +1,4 @@
-library f2f_notifications;
+library flutter_local_notifications;
 
 import 'dart:async';
 import 'dart:typed_data';
@@ -19,4 +19,5 @@ part 'src/platform_specifics/ios/initialization_settings.dart';
 part 'src/platform_specifics/ios/notification_details.dart';
 part 'src/notification_details.dart';
 part 'src/initialization_settings.dart';
-part 'src/f2f_notifications.dart';
+part 'src/flutter_local_notifications.dart';
+part 'src/notification_app_launch_details.dart';
