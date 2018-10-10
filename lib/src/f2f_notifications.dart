@@ -184,7 +184,7 @@ class FlutterLocalNotificationsPlugin {
       'repeatInterval': interval.index,
       'repeatTime': notificationTime.toMap(),
       'day': day.value,
-      'millisecondsSinceEpoch': scheduledDate.millisecondsSinceEpoch,
+      //'millisecondsSinceEpoch': scheduledDate.millisecondsSinceEpoch,
       'platformSpecifics': serializedPlatformSpecifics,
       'payload': payload ?? ''
     });
